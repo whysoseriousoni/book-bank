@@ -20,7 +20,7 @@
         String mai=request.getParameter("ea1");
         String pass=request.getParameter("ps1");
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/asd","root","");
+        Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-3-215-207-12.compute-1.amazonaws.com/d1asg36jccevbc?user=gmixkyznbqavld&password=6637fb77025d05636e58c31f7ac781bd22cd3d20b7c38e8acf3896d0d3649883&ssl=true);
         String sql="insert into user (name,email,pass) values (?,?,?)";
         PreparedStatement ps=conn.prepareStatement(sql);
         ps.setString(1, name);

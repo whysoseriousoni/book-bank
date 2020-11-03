@@ -11,7 +11,7 @@
         String qua = request.getParameter("quantity");
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/asd","root","");
+        Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-3-215-207-12.compute-1.amazonaws.com/d1asg36jccevbc?user=gmixkyznbqavld&password=6637fb77025d05636e58c31f7ac781bd22cd3d20b7c38e8acf3896d0d3649883&ssl=true);
         String email=request.getParameter("email");
         String  check="select * from user where email=? and pass=?";
         PreparedStatement ps =conn.prepareStatement(check);
